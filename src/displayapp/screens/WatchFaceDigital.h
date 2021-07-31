@@ -39,6 +39,8 @@ namespace Pinetime {
         void OnObjectEvent(lv_obj_t* pObj, lv_event_t i);
 
       private:
+        void AlignInfoRow();
+
         std::array<char, 5> displayedChar {0, 0, 0, 0, 0};
 
         uint16_t currentYear = 1970;
