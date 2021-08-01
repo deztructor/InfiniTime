@@ -763,6 +763,7 @@ set(
         -MP -MD
         -mcpu=cortex-m4 -mthumb
         -mfloat-abi=hard -mfpu=fpv4-sp-d16
+        -fsingle-precision-constant # FPU supports only float
         -mabi=aapcs
         -Wall -Wno-unknown-pragmas -Wreturn-type -Werror=return-type
         -ffunction-sections -fdata-sections -fno-strict-aliasing -fno-builtin --short-enums
