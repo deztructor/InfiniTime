@@ -757,7 +757,18 @@ link_directories(
 )
 
 
-set(COMMON_FLAGS -MP -MD -mthumb -mabi=aapcs -Wall -Wno-unknown-pragmas -g3 -ffunction-sections -fdata-sections -fno-strict-aliasing -fno-builtin --short-enums -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wreturn-type -Werror=return-type -fstack-usage -fno-exceptions -fno-non-call-exceptions)
+set(
+        COMMON_FLAGS
+        -g3
+        -MP -MD
+        -mcpu=cortex-m4 -mthumb
+        -mfloat-abi=hard -mfpu=fpv4-sp-d16
+        -mabi=aapcs
+        -Wall -Wno-unknown-pragmas -Wreturn-type -Werror=return-type
+        -ffunction-sections -fdata-sections -fno-strict-aliasing -fno-builtin --short-enums
+        -fstack-usage -fno-exceptions -fno-non-call-exceptions
+        )
+
 add_definitions(-DCONFIG_GPIO_AS_PINRESET)
 add_definitions(-DNIMBLE_CFG_CONTROLLER)
 add_definitions(-DOS_CPUTIME_FREQ)
